@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Incident Report</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 
@@ -40,9 +41,36 @@
 			<label>Check by : </label>
 			<input type="text" name="check">
 			<br>
-			<input type="submit" name="submit">
 			</fieldset>
+			
+			<fieldset>
+				<legend>Log detail</legend>
+			<div id="container">
+				<label>Time : </label>
+				<input type="time" name="log_time[]">
+				<label>Detail : </label>
+				<input type="text" name="log_detail[]">
+				<a href="#" id="add">Add more</a>
+			</div>
+			</fieldset>
+			<input type="submit" name="submit">
 		</form>
 	</div>
+<script>
+	 $(document).ready(function(e){
+	 	var html = '</p><div><label>Time : </label> <input type="time" name="log_time[]"> <label>Detail : </label>				<input type="text" name="log_detail[]"> <a href="#" id="delete">Delete</a></div> ';
+
+	 	$("#add").click(function(e){
+	 		$("#container").append(html);
+	 	});
+
+	 	$("#container").on("click","#delete",function(e){
+        //alert();
+        $(this).parent("div").remove();
+      });
+
+	 });
+
+</script>
 </body>
 </html>
