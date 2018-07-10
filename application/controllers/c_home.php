@@ -17,6 +17,11 @@ class C_home extends CI_Controller {
 	public function submitForm()
 	{
 		$table = 'incident_reports';
+		$table1 = 'incident_detail';
+		$table2 = 'incident_test';
+		$arr_log_time = $this->input->post('log_time');
+		$arr_detail = $this->input->post('log_detail');
+		$data_insert = array();
 		$data = array(
 			'title' => $this->input->post('title'),
 			'date' => $this->input->post('date'),
@@ -27,10 +32,19 @@ class C_home extends CI_Controller {
 			'follow_up' => $this->input->post('fu'),
 			'remarks' => $this->input->post('remarks'),
 			'reported_by' => $this->input->post('reported'),
-			'check_by' => $this->input->post('submit'),
+			'check_by' => $this->input->post('check'),
 			 );
 
-		$this->m_incident->input($table,$data);
+		for($i=0;$i<count($arr_log_time);$i++){
+	    	$data_insert[] = array(
+	    		'time_detail' => $arr_log_time[$i],
+	    		'detail_desc' => $arr_detail[$i],
+	    	);
+	    }
+	    //var_dump($data_insert);
+		// $this->m_incident->input($table,$data);
+		//$this->m_incident->input($table1,$data_insert);
+		$this->m_incident->input2($table1,$data_insert);
 	} 
 
 }

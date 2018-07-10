@@ -7,6 +7,10 @@ class M_incident extends CI_Model {
 	{
 		$this->db->insert($table,$data);
 	}
+	function input2($table,$data)
+	{
+		$this->db->insert_batch($table,$data);
+	}
 
 }
 
