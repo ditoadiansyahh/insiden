@@ -33,7 +33,8 @@ class C_home extends CI_Controller {
 			'remarks' => $this->input->post('remarks'),
 			'reported_by' => $this->input->post('reported'),
 			'check_by' => $this->input->post('check'),
-			 );				
+			 );		
+			 		
 		$insert_id = $this->m_incident->input($table,$data);
 
 		for($i=0;$i<count($arr_log_time);$i++){
@@ -43,7 +44,6 @@ class C_home extends CI_Controller {
 	    		'detail_desc' => $arr_detail[$i],
 	    	);
 	    }
-
 
 		$this->m_incident->input2($table1,$data_insert);
 	} 
