@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_home extends CI_Controller {
-
+	//s
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('m_incident');
