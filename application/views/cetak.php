@@ -1,151 +1,178 @@
 <page_header> 
 	<table>
 		<tr>
-			<td colspan="7" height="20">&nbsp;</td>
+			<td colspan="12" height="20">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="7"><h2 align="center">Berita Acara</h2></td>
+			<td colspan="12" height="20"><hr>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="12"><h2 align="center">Incident Report</h2></td>
+		</tr>
+		<tr>
+			<td colspan="12" height="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="12"><h2 align="center">Grapari BSD Offline</h2></td>
+		</tr>
+		<tr>
+			<td colspan="12" height="20">&nbsp;</td>
 		</tr>
 	</table>
 </page_header>
-<table cellpadding="3">
+<table cellpadding="3" border="1">
 	<tr>
-		<td colspan="7"><h3 align="center"><?=$judul?></h3></td>
+		<td colspan="1">1.</td>
+		<td colspan="5">Incident Date : (Tanggal Kejadian)</td>
+		<td colspan="6">15 September 2017</td>
 	</tr>
 	<tr>
-		<td colspan="7" height="20">&nbsp;</td>
+		<td colspan="1">2.</td>
+		<td colspan="5">Incident Time: (Jam kejadian)</td>
+		<td colspan="6">15.00 WIB</td>
 	</tr>
 	<tr>
-		<td colspan="7" height="20">
-			Pada hari ini, <?php $mydate=getdate(date("U")); echo "$mydate[weekday]";?> tanggal <?php $mydate=getdate(date("U")); echo "$mydate[mday]";?> bulan <?php $mydate=getdate(date("U")); echo "$mydate[month]";?> tahun <?php $mydate=getdate(date("U")); echo "$mydate[year]";?>, yang bertanda tangan dibawah ini:
-		</td>
+		<td colspan="1">3.</td>
+		<td colspan="5">Incident Location: (Lokasi kejadian)</td>
+		<td colspan="6">Grapari BSD</td>
 	</tr>
 	<tr>
-		<td colspan="7" height="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="1">I. </td>
-		<td colspan="1" >Nama/NIK</td>
-		<td colspan="5">: <?=$nama?>/<?=$nik?></td>
-		
-	</tr>
-	<tr>
-		<td colspan="1"></td>
-		<td colspan="1">Jabatan</td>
-		<td colspan="5">: <?=$jabatan?></td>
-		
-	</tr>
-	<tr>
-		<td colspan="7">&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="1">II. </td>
-		<td colspan="1">Nama/NIK</td>
-		<td colspan="5">: <?=$nama2?>/<?=$nik2?></td>
-		
+		<td colspan="1">4.</td>
+		<td colspan="5">Incident Detail: (Detil kejadian)</td>
+		<td colspan="6">Router Unreachable</td>
 	</tr>
 	<tr>
 		<td colspan="1"></td>
-		<td colspan="1">Jabatan</td>
-		<td colspan="5">: <?=$jabatan2?></td>
-		
+		<td colspan="11">
+			<table cellpadding="3">
+				<tr>
+					<td colspan="11">
+						<strong>Jumat, 15 September 2017</strong>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="12" height="20">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="1">
+						<strong>15:10</strong>   
+					</td>
+					<td colspan="10">
+						IT Support mendapatkan Alert sms dari system di grapari BSD jaringan di sana Router Uncreachable
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1">
+						16:10   
+					</td>
+					<td colspan="10">
+						IT Support mendapatkan Alert sms dari system di grapari BSD jaringan di sana Router Uncreachable
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1">
+						17:10   
+					</td>
+					<td colspan="10">
+						IT Support mendapatkan Alert sms dari system di grapari BSD jaringan di sana Router Uncreachable
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1">
+						18:10   
+					</td>
+					<td colspan="10">
+						IT Support mendapatkan Alert sms dari system di grapari BSD jaringan di sana Router Uncreachable
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1">
+						19:10   
+					</td>
+					<td colspan="10">
+						IT Support mendapatkan Alert sms dari system di grapari BSD jaringan di sana Router Uncreachable
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1">
+						20:10   
+					</td>
+					<td colspan="10">
+						IT Support mendapatkan Alert sms dari system di grapari BSD jaringan di sana Router Uncreachable
+					</td>
+				</tr>
+			</table>
+		</td>		
 	</tr>
 	<tr>
-		<td></td>
-		<td colspan="5">
-		</td>
-		<td></td>
+		<td colspan="12">&nbsp;</td>
 	</tr>
 	<tr>
-		<td colspan="7" height="10" style="text-align: justify; line-height: 1.5">
-			<?=$statement?>
-		</td>
+		<td colspan="1">5.</td>
+		<td colspan="11">Causes of the Incident: (Penyebab kejadian)</td>
 	</tr>
 	<tr>
 		<td colspan="1"></td>
-		<td colspan="5">
-			<table align="center" border="1">
-			<tr>
-				<td style="width:50px; word-wrap:break-word; display:inline-block;">
-					No
-				</td>
-				<td>
-					Type/Laptop
-				</td>
-				<td style="width:120px; word-wrap:break-word; display:inline-block;">
-					Serial Number
-				</td>
-				<td>
-					Status Instalasi Aplikasi
-				</td>
-			</tr>
-			<?php $no=1; foreach ($isi as $x)
-				
-			{ ?>
-			<tr>
-				
-				<td style="width:50px; word-wrap:break-word; display:inline-block;">
-					<?php echo $no++ ?>
-				</td>
-				<td >
-					<?= $x['tipe'] ?>		
-				</td>
-				<td style="width:120px; word-wrap:break-word; display:inline-block;">
-					<?= $x['serial_number'] ?>
-				</td>
-				<td>
-					<?= $x['status'] ?>
-				</td>
-				
-			</tr>
-			<?php } ?> 
-		</table>
-		</td>
+		<td colspan="11">•	Unplanned Downtime, Kabel Putus</td>
+	</tr>
+	<tr>
+		<td colspan="12">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="1">6.</td>
+		<td colspan="11">Remedial Action: (Tindakan yang dilakukan)</td>
+	</tr>
+	<tr>
 		<td colspan="1"></td>
+		<td colspan="11">•	Unplanned Downtime, Kabel Putus</td>
 	</tr>
 	<tr>
-		
-		<td colspan="7" style="text-align: justify; line-height: 1.5">Demikian berita acara ini dibuat dengan sebaik baiknya. Terima kasih.</td>
-		
+		<td colspan="12">&nbsp;</td>
 	</tr>
 	<tr>
-		<td colspan="7">&nbsp;</td>
-	</tr>
-
-	<tr>
-		
-		<td colspan="2" style="text-align: center"></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td colspan="2" style="text-align: center;"><?=$lokasi?>, <?php $mydate=getdate(date("U")); echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";?></td>
-		
-	</tr>
-
-	<tr>
-		<td colspan="7">&nbsp;</td>
-	</tr>
-
-	<tr>
-		
-		<td colspan="2" style="text-align: center"><?=$jabatan?></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td colspan="2" style="text-align: center;"><?=$jabatan2?></td>
-		
+		<td colspan="1">7.</td>
+		<td colspan="11">Remedial Action: (Tindakan yang dilakukan)</td>
 	</tr>
 	<tr>
-		<td colspan="7" height="40">&nbsp;</td>
+		<td colspan="1"></td>
+		<td colspan="11">•	Unplanned Downtime, Kabel Putus</td>
 	</tr>
-
 	<tr>
-		
-		<td colspan="2" style="text-align: center;"><?=$nama?></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td colspan="2" style="text-align: center;"><?=$nama2?></td>
-		
+		<td colspan="12">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="1">8.</td>
+		<td colspan="11">Remedial Action: (Tindakan yang dilakukan)</td>
+	</tr>
+	<tr>
+		<td colspan="1"></td>
+		<td colspan="11">•	Unplanned Downtime, Kabel Putus</td>
+	</tr>
+	<tr>
+		<td colspan="12">&nbsp;</td>
+	</tr>
+	<!-- ----------------------Tanda tangan------------------------ -->
+	<tr> 
+		<td colspan="1"></td>
+			<td colspan="11">
+				<table cellpadding="3">
+					<tr>
+						<td colspan="5">Reported By/Date:</td>
+						<td colspan="6" align="right">Checked By/Date:</td>
+					</tr>
+					<tr> 
+						<td colspan="5"><i>Pelapor/Tanggal</i></td>
+						<td colspan="6" align="right"><i>Diperiksa oleh/Tanggal</i></td>
+					</tr>
+					<!-- ----------------------Gambar Tanda tangan------------------------ -->
+					<tr>
+						<td colspan="12" height="40">&nbsp;</td>
+					</tr>
+					<tr> 
+						<td colspan="5">Rony FR/ 16 September 2017</td>
+						<td colspan="6" align="right">Aang A Wahyudi/ 16 September 2017</td>
+					</tr>
+				</table>
+			</td>
 	</tr>
 </table>

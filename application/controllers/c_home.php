@@ -1,27 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+use Spipu\Html2Pdf\Html2Pdf;
 
 class C_home extends CI_Controller {
-
+	//s
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('m_incident');
 		//$this->load->library('Dates');			
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view('v_home');
 	}
 
-	public function submitForm()
-	{
-		$table = 'incident_reports';
-		$table1 = 'incident_detail';
-		$table2 = 'incident_test';
-		$arr_log_time = $this->input->post('log_time');
-		$arr_detail = $this->input->post('log_detail');
-		$data_insert = array();
+	public function printpdf($hasil){
+		$html2pdf = new Html2Pdf('P', 'A4', 'en');
+		$html2pdf->pdf->SetMargins(20, 5, 20);
+        $html2pdf->pdf->SetMargins(20, 5, 20);
+        $html2pdf->pdf->SetFont('Times', '', 10);
+		$html2pdf->pdf->AddPage(); 
+		$html2pdf->pdf->WriteHTML($hasil); 
+		$html2pdf->pdf->lastPage();
+		$html2pdf->output('my.pdf');
+	}
+
+	public function submitForm(){
 		$data = array(
 			'title' => $this->input->post('title'),
 			'date' => $this->input->post('date'),
@@ -35,7 +39,11 @@ class C_home extends CI_Controller {
 			'check_by' => $this->input->post('check'),
 			 );		
 			 		
-		$insert_id = $this->m_incident->input($table,$data);
+		$insert_id = $this->m_incident->input('incident_reports',$data);
+
+		$arr_log_time = $this->input->post('log_time');
+		$arr_detail = $this->input->post('log_detail');
+		$data_insert = array();
 
 		for($i=0;$i<count($arr_log_time);$i++){
 	    	$data_insert[] = array(
@@ -45,8 +53,12 @@ class C_home extends CI_Controller {
 	    	);
 	    }
 
-		$this->m_incident->input2($table1,$data_insert);
+		$this->m_incident->input2('incident_detail',$data_insert);
 	} 
+
+	public function result(){
+		$this->printpdf($this->load->view('cetak',$this->submitForm(),true));
+	}
 
 }
 
