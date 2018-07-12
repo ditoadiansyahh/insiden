@@ -8,7 +8,7 @@
 
 <body>
 	<div id="incident">
-		<form method="post" action="<?php echo base_url().'index.php/c_home/submitForm'?>" name="incident_form" id="incident_form">
+		<form method="post" action="<?php echo base_url().'index.php/c_home/result'?>" name="incident_form" id="incident_form">
 			<fieldset>
 				<legend>Form Berita Acara</legend>	
 			<label>Incident Title : </label>
