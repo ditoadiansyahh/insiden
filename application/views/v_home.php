@@ -12,22 +12,22 @@
 			<fieldset>
 				<legend>Form Berita Acara</legend>	
 			<label>Incident Title : </label>
-			<input type="text" name="title">
+			<input type="text" name="title" required>
 			<br>
 			<label>Incident Date : </label>
-			<input type="date" name="date">
+			<input type="date" name="date" required>
 			<br>
 			<label>Incident Time : </label>
-			<input type="time" name="time">
+			<input type="time" name="time" required>
 			<br>
 			<label>Incident Detail : </label>
-			<input type="text" name="detail">
+			<input type="text" name="detail" required>
 			<br>
 			<label>Cause of Incident : </label>
-			<input type="text" name="coi">
+			<input type="text" name="coi" required>
 			<br>
 			<label>Remedial Action : </label>
-			<input type="text" name="ra">
+			<input type="text" name="ra" required>
 			<br>
 			<label>Follow up : </label>
 			<input type="text" name="fu">
@@ -36,10 +36,10 @@
 			<input type="text" name="remarks">
 			<br>
 			<label>Reported by : </label>
-			<input type="text" name="reported">
+			<input type="text" name="reported" required>
 			<br>
 			<label>Check by : </label>
-			<input type="text" name="check">
+			<input type="text" name="check" required>
 			<br>
 			</fieldset>
 			
