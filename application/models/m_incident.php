@@ -3,13 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_incident extends CI_Model {
 
-	function input($table,$data)
-	{
+	function input($table,$data){
 		$this->db->insert($table,$data);
 		return $this->db->insert_id();
 	}
-	function input2($table,$data)
-	{
+	
+	function input2($table,$data){
 		$this->db->insert_batch($table,$data);
 	}
 
